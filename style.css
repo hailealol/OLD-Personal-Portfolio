@@ -10,27 +10,37 @@
 
 header {
     position: sticky;
+    z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fcefd4;
+    background-color: #f8e9cd;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 15px 30px;
     border-bottom: solid 1px #413623;
 }
 
-#logo a {
-    margin-right: 30px;
+#logo {
+    margin-right: 10px;
     text-decoration: none;
     font-family: "Ribeye", serif;
+    font-size: 50px;
+}
+
+#nav-bar {
+    width: 100%;
 }
 
 #nav-bar ul {
     list-style-type: none;
     gap: 20px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
 }
 
 #nav-bar a {
@@ -45,13 +55,14 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     overflow: visible;
-    background-image: url("./assets/creamPaperTexture.png");
+    background-image: url("./assets/heroPaper.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 #left {
@@ -83,7 +94,7 @@ header {
 #hero-btn {
     text-decoration: none;
     background-color: #658174;
-    color: #fcefd4;
+    color: #f8e9cd;
     padding: 15px 40px;
     border-radius: 50px;
     text-transform: uppercase;
@@ -104,44 +115,85 @@ header {
     width: 90%;
     max-width: 750px;
     height: auto;
-    margin-right: -25px;
-    margin-bottom: 120px;
+    margin-right: 0;
+    margin-bottom: 80px;
 }
 
 /* About me section */
 
 #about-me {
     min-height: 100vh;
-    background-color: orange;
+    background-image: url("./assets/aboutMePaper.png");
     margin-top: -120px;
     padding-top: 160px; 
     position: relative;
-    z-index: 1;
+    z-index: 4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Projects section */
 
 #projects {
-    background-color: yellow;
+    min-height: 100vh;
+    background-image: url("./assets/projectsPaper.png");
+    margin-top: -120px;
+    padding-top: 160px;
+    position: relative;
+    z-index: 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Skills section */
 
 #skills {
-    background-color: green;
+    min-height: 100vh;
+    background-image: url("./assets/aboutMePaper.png");
+    margin-top: -120px;
+    padding-top: 160px; 
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Contact section */
 
 #contact {
-    background-color: blue;
+    min-height: 100vh;
+    background-image: url("./assets/contactPaper.png");
+    margin-top: -120px;
+    padding-top: 160px; 
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Footer */
 
 footer {
-    background-color: purple;
+    background-color: #f8e9cd;
     padding: 30px;
+    margin-top: -120px;
+    padding-top: 160px; 
 }
 
 /* Medium Screens */
@@ -159,8 +211,8 @@ footer {
     #right img {
         width: 95%;
         max-width: none;
-        margin-right: -90px;
-        margin-bottom: 120px;
+        margin-right: 0px;
+        margin-bottom: 80px;
     }
 
     #intro, #name {
@@ -191,7 +243,11 @@ footer {
     #right {
         width: 60%;
         justify-content: center;
-        margin-bottom: 120px;
+        margin-bottom: 80px;
+    }
+
+    #right img {
+        margin-right: 0;
     }
 
     #intro, #name {
@@ -231,7 +287,7 @@ footer {
     #right {
         justify-content: center;
         align-items: center;
-        margin-bottom: 120px;
+        margin-bottom: 80px;
     }
 
     #right img {
