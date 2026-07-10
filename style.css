@@ -9,7 +9,7 @@
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 img, svg {
@@ -64,6 +64,10 @@ header {
     font-size: 25px;
 }
 
+.sectionLink:hover {
+    text-decoration: underline;
+}
+
 /* Hero */
 #hero {
     min-height: calc(100vh - 60px);
@@ -116,6 +120,11 @@ header {
     font-weight: bolder;
     margin-top: 25px;
     font-size: 1.5rem;
+    transition-duration: 0.4s;
+}
+
+#hero-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
 }
 
 #right {
@@ -132,6 +141,7 @@ header {
     height: auto;
     margin-right: 0;
     margin-bottom: 140px;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* About me section */
@@ -177,10 +187,10 @@ header {
 }
 
 #about-container img {
-    flex: 0 1 600px;
     width: min(100%, 900px);
     height: auto;
     max-height: none;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Projects section */
@@ -219,7 +229,10 @@ header {
     width: 400px;
     height: 460px;
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
+    transition-duration: 0.4s;
+}
 
 .card > img {
     position: absolute;
@@ -240,6 +253,10 @@ header {
     background-size: 100% 100%;
     z-index: 2;
     pointer-events: none;
+}
+
+.card:hover {
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.45));
 }
 
 .card-info {
@@ -297,6 +314,12 @@ header {
     height: 195px;
     padding: 10px;
     border-radius: 10%;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
+    transition-duration: 0.4s;
+}
+
+.skills-icon:hover {
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.35));
 }
 
 /* Contact section */
@@ -365,10 +388,10 @@ header {
 }
 
 #contact-container > img {
-    flex: 0 1 500px;
     width: min(100%, 500px);
     min-height: 0;
     height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Footer */
