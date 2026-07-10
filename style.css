@@ -129,7 +129,7 @@ header {
 /* About me section */
 
 #about-me {
-    min-height: 100vh;
+    min-height: 80vh;
     background-image: url("./assets/aboutMePaper.png");
     margin-top: -120px;
     padding-top: 160px; 
@@ -141,6 +141,34 @@ header {
     background-repeat: no-repeat;
     overflow: visible;
     filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
+}
+
+#about-header {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+#about-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about-info {
+    width: 45rem;
+}
+
+#about-container p {
+    line-height: 35px;
+    font-size: 2rem;
+}
+
+#about-container img {
+    height: auto;
+    max-height: 400px;
+    width: auto;
 }
 
 /* Projects section */
@@ -236,6 +264,18 @@ footer {
         font-size: 1rem;
     }
 
+    #about-header {
+        font-size: 3rem;
+    }
+
+    #about-info {
+        width: 25rem;
+    }
+
+    #about-container p {
+        font-size: 2rem;
+        margin-bottom: 80px;
+    }
 }
 
 @media (max-width: 1200px) and (min-width: 901px) {
@@ -269,6 +309,19 @@ footer {
 
     #hero-btn {
         font-size: 1rem;
+    }
+
+    #about-header {
+        font-size: 3rem;
+    }
+
+    #about-info {
+        width: 25rem;
+    }
+
+    #about-container p {
+        font-size: 1rem;
+        margin-bottom: 80px;
     }
 }
 
@@ -318,5 +371,24 @@ footer {
         font-size: 1rem;
         margin-top: 25px;
         margin-bottom: 0;
+    }
+
+    #about-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #about-header {
+        font-size: 2rem;
+    }
+
+    #about-info {
+        width: 25rem;
+    }
+
+    #about-container p {
+        font-size: 1rem;
+        margin-bottom: 80px;
     }
 }
