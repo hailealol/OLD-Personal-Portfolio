@@ -7,7 +7,6 @@
 }
 
 /* Header and nav bar */
-
 header {
     position: sticky;
     z-index: 9999;
@@ -56,7 +55,6 @@ header {
 }
 
 /* Hero */
-
 #hero {
     min-height: calc(100vh - 60px);
     display: flex;
@@ -120,14 +118,13 @@ header {
 #right img {
     display: block;
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     height: auto;
     margin-right: 0;
     margin-bottom: 140px;
 }
 
 /* About me section */
-
 #about-me {
     min-height: 80vh;
     background-image: url("./assets/aboutMePaper.png");
@@ -167,14 +164,13 @@ header {
 
 #about-container img {
     height: auto;
-    max-height: 400px;
+    max-height: 600px;
     width: auto;
 }
 
 /* Projects section */
-
 #projects {
-    min-height: 100vh;
+    min-height: 80vh;
     background-image: url("./assets/projectsPaper.png");
     margin-top: -120px;
     padding-top: 160px;
@@ -188,10 +184,67 @@ header {
     filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
-/* Skills section */
+#projects-container h2 {
+    font-size: 4rem;
+    text-align: center;
+}
 
+#projects-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;}
+
+.card > img {
+    position: absolute;
+    top: 0px;
+    left: 23px;
+    width: calc(100% - 50px);
+    height: 500px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("./assets/polaroid.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card-info {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+    margin: 0;
+    z-index: 3;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+/* Skills section */
 #skills {
-    min-height: 100vh;
+    min-height: 50vh;
     background-image: url("./assets/aboutMePaper.png");
     margin-top: -120px;
     padding-top: 160px; 
@@ -203,12 +256,34 @@ header {
     background-repeat: no-repeat;
     overflow: visible;
     filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
+
+}
+
+#skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#skills-header {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.skills-icon {
+    width: 185px;
+    height: 195px;
+    padding: 10px;
+    border-radius: 10%;
 }
 
 /* Contact section */
-
 #contact {
-    min-height: 100vh;
+    min-height: 60vh;
     background-image: url("./assets/contactPaper.png");
     margin-top: -120px;
     padding-top: 160px; 
@@ -222,15 +297,73 @@ header {
     filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
-/* Footer */
+#contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
 
+#contact-container h2 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+#contact-container p {
+    font-size: 2.5rem;
+}
+
+#contact-me {
+    max-width: 650px;
+}
+
+#contact-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+#contact-list li a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#contact-list svg {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+#contact-container img {
+    height: auto;
+    min-height: 400px;
+    width: auto;
+    filter: drop-shadow(10px 10px 8px rgba(0, 0, 0, 0.25));
+}
+
+/* Footer */
 footer {
     background-image: url("./assets/heroPaper.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 30px;
-    margin-top: -120px;
+    padding: 20px;
+    margin-top: -160px;
     padding-top: 160px; 
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 /* Medium Screens */
@@ -276,6 +409,12 @@ footer {
         font-size: 2rem;
         margin-bottom: 80px;
     }
+
+    #contact-container h2 {
+    font-size: 4rem;
+    margin-left: 20px;
+    text-align: center;
+}
 }
 
 @media (max-width: 1200px) and (min-width: 901px) {
@@ -323,10 +462,70 @@ footer {
         font-size: 1rem;
         margin-bottom: 80px;
     }
+
+    #about-container img {
+        max-height: 500px;
+    }
+
+    #skills {
+        min-height: 70vh;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    #contact-container h2 {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 3rem;
+    }
+
+    #contact-me {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    #contact-container p {
+        font-size: 2rem;
+    }
+
+    #contact-list {
+        justify-content: center;
+        gap: 35px;
+        flex-wrap: wrap;
+    }
+
+    #contact-list li a {
+        font-size: 2rem;
+    }
+
+    #contact-list svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    #contact-container > img {
+        width: min(70%, 500px);
+        min-height: 0;
+        height: auto;
+    }
 }
 
 /* Small Screen */
 @media (max-width: 900px) {
+    #logo {
+        font-size: 25px;
+    }
+
+    #nav-bar ul {
+        gap: 1rem;
+    }
+
     #hero {
         min-height: auto;
         flex-direction: column;
@@ -390,5 +589,65 @@ footer {
     #about-container p {
         font-size: 1rem;
         margin-bottom: 80px;
+    }
+
+    #about-container img {
+        max-height: 400px;
+    }
+
+    #projects-cards {
+        flex-direction: column;
+    }
+
+    #projects {
+        padding-bottom: 100px;
+    }
+
+    #skills {
+        padding-bottom: 100px;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    #contact-container h2 {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 3rem;
+    }
+
+    #contact-me {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    #contact-container p {
+        font-size: 2rem;
+    }
+
+    #contact-list {
+        justify-content: center;
+        gap: 35px;
+        flex-wrap: wrap;
+    }
+
+    #contact-list li a {
+        font-size: 2rem;
+    }
+
+    #contact-list svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    #contact-container > img {
+        width: min(70%, 500px);
+        min-height: 0;
+        height: auto;
     }
 }
