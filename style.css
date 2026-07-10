@@ -6,6 +6,16 @@
     color: #413623;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, svg {
+    max-width: 100%;
+}
+
 /* Header and nav bar */
 header {
     position: sticky;
@@ -84,7 +94,7 @@ header {
 }
 
 #intro, #name {
-    font-size: 10rem;
+    font-size: clamp(5rem, 10vw, 13rem);
     font-family: "Ribeye", serif;
 }
 
@@ -93,7 +103,7 @@ header {
 }
 
 #subtitle {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 #hero-btn {
@@ -126,10 +136,11 @@ header {
 
 /* About me section */
 #about-me {
-    min-height: 80vh;
+    min-height: 90vh;
     background-image: url("./assets/aboutMePaper.png");
     margin-top: -120px;
     padding-top: 160px; 
+    padding-bottom: 80px;
     position: relative;
     z-index: 4;
     background-repeat: no-repeat;
@@ -147,14 +158,17 @@ header {
 
 #about-container {
     display: flex;
-    flex-direction: row;
-    margin: 20px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: clamp(2rem, 5vw, 6rem);
+    padding: 2rem 5%;
+    margin: 0;
 }
 
 #about-info {
-    width: 45rem;
+    width: auto;
+    flex: 1 1 500px;
+    max-width: 720px;
 }
 
 #about-container p {
@@ -163,9 +177,10 @@ header {
 }
 
 #about-container img {
+    flex: 0 1 600px;
+    width: min(100%, 900px);
     height: auto;
-    max-height: 600px;
-    width: auto;
+    max-height: none;
 }
 
 /* Projects section */
@@ -174,6 +189,7 @@ header {
     background-image: url("./assets/projectsPaper.png");
     margin-top: -120px;
     padding-top: 160px;
+    padding-bottom: 120px;
     position: relative;
     z-index: 3;
     background-repeat: no-repeat;
@@ -191,10 +207,11 @@ header {
 
 #projects-cards {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .card {
@@ -207,9 +224,9 @@ header {
 .card > img {
     position: absolute;
     top: 0px;
-    left: 23px;
-    width: calc(100% - 50px);
-    height: 500px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 100%;
     object-fit: cover;
     z-index: 1;
 }
@@ -244,10 +261,11 @@ header {
 
 /* Skills section */
 #skills {
-    min-height: 50vh;
+    min-height: 60vh;
     background-image: url("./assets/aboutMePaper.png");
     margin-top: -120px;
-    padding-top: 160px; 
+    padding-top: 160px;
+    padding-bottom: 120px; 
     position: relative;
     z-index: 2;
     background-repeat: no-repeat;
@@ -287,6 +305,7 @@ header {
     background-image: url("./assets/contactPaper.png");
     margin-top: -120px;
     padding-top: 160px; 
+    padding-bottom: 120px;
     position: relative;
     z-index: 1;
     background-repeat: no-repeat;
@@ -299,23 +318,24 @@ header {
 
 #contact-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: clamp(2rem, 4vw, 4rem);
+    padding: 2rem;
 }
 
 #contact-container h2 {
-    font-size: 6rem;
-    text-align: center;
-}
-
-#contact-container p {
-    font-size: 2.5rem;
+    font-size: clamp(3rem, 5vw, 6rem);
 }
 
 #contact-me {
     max-width: 650px;
+}
+
+#contact-me p {
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 #contact-list {
@@ -344,11 +364,11 @@ header {
     flex-shrink: 0;
 }
 
-#contact-container img {
+#contact-container > img {
+    flex: 0 1 500px;
+    width: min(100%, 500px);
+    min-height: 0;
     height: auto;
-    min-height: 400px;
-    width: auto;
-    filter: drop-shadow(10px 10px 8px rgba(0, 0, 0, 0.25));
 }
 
 /* Footer */
@@ -579,15 +599,15 @@ footer p {
     }
 
     #about-header {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #about-info {
-        width: 25rem;
+        width: 30rem;
     }
 
     #about-container p {
-        font-size: 1rem;
+        font-size: 2rem;
         margin-bottom: 80px;
     }
 
