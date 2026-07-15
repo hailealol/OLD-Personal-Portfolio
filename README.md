@@ -1,7 +1,7 @@
 # Personal Portfolio
 A responsive, personal portfolio website built with HTML and CSS to showcase my projects, skills, and educational background as a Computer Science major.
 I wanted this portfolio to reflect my personal style while showcasing my skills as a developer. To achieve this, I designed the site around a vintage
-scrapbook-inspired aesthetic with layered paper textures and handmade illustrations, while keeping the layout clean, organized, and easy to navigate.
+scrapbook-inspired aesthetic with layered paper textures and handmade illustrations, while keeping the layout clean, organized, and easy to navigate. Click [here](https://hailealol.github.io/Personal-Portfolio/) to view a live demo.
 
 <img width="1245" height="834" alt="personal portfolio" src="https://github.com/user-attachments/assets/fec03e4a-0286-42ff-a6f1-3a0636de1015" />
 
