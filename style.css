@@ -23,9 +23,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-image: url("./assets/heroPaper.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +44,6 @@ header {
 
 #nav-bar ul {
     list-style-type: none;
-    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,29 +64,47 @@ header {
     text-decoration: underline;
 }
 
+/* Sections */
+header, footer {
+    background-image: url("./assets/heroPaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero, #about-me, #projects, #skills, #contact {
+    position: relative;
+    overflow: visible;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
+}
+
+#about-me, #projects, #skills, #contact {
+    margin-top: -120px;
+    padding-top: 160px;
+}
+
+#about-container img, #right img, #contact-container img, .card, .skills-icon {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+}
+
 /* Hero */
 #hero {
     min-height: calc(100vh - 60px);
     display: flex;
     align-items: center;
-    position: relative;
     z-index: 5;
-    overflow: visible;
-    background-image: url("./assets/heroPaper.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
+    background-image: url("./assets/heroPaper.png"); 
 }
 
 #left {
     width: 45%;
     display: flex;
+    flex-direction: column;    
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
 }
 
 #intro {
@@ -124,7 +138,7 @@ header {
 }
 
 #hero-btn:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
 #right {
@@ -141,24 +155,14 @@ header {
     height: auto;
     margin-right: 0;
     margin-bottom: 140px;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* About me section */
 #about-me {
     min-height: 90vh;
     background-image: url("./assets/aboutMePaper.png");
-    margin-top: -120px;
-    padding-top: 160px; 
     padding-bottom: 80px;
-    position: relative;
     z-index: 4;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    overflow: visible;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 #about-header {
@@ -190,35 +194,24 @@ header {
     width: min(100%, 900px);
     height: auto;
     max-height: none;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Projects section */
 #projects {
     min-height: 80vh;
     background-image: url("./assets/projectsPaper.png");
-    margin-top: -120px;
-    padding-top: 160px;
     padding-bottom: 120px;
-    position: relative;
     z-index: 3;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    overflow: visible;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
-#projects-container h2 {
+#projects-container h2, #skills-header {
     font-size: 4rem;
     text-align: center;
 }
 
 #projects-cards {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
@@ -230,13 +223,12 @@ header {
     height: 460px;
     display: flex;
     flex-direction: column;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
     transition-duration: 0.4s;
 }
 
 .card > img {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 15px;
     width: calc(100% - 30px);
     height: 100%;
@@ -280,33 +272,17 @@ header {
 #skills {
     min-height: 60vh;
     background-image: url("./assets/aboutMePaper.png");
-    margin-top: -120px;
-    padding-top: 160px;
     padding-bottom: 120px; 
-    position: relative;
     z-index: 2;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    overflow: visible;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
-
 }
 
 #skills-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     gap: 20px;
-}
-
-#skills-header {
-    text-align: center;
-    font-size: 4rem;
 }
 
 .skills-icon {
@@ -314,7 +290,6 @@ header {
     height: 195px;
     padding: 10px;
     border-radius: 10%;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
     transition-duration: 0.4s;
 }
 
@@ -325,18 +300,9 @@ header {
 /* Contact section */
 #contact {
     min-height: 60vh;
-    background-image: url("./assets/contactPaper.png");
-    margin-top: -120px;
-    padding-top: 160px; 
+    background-image: url("./assets/contactPaper.png"); 
     padding-bottom: 120px;
-    position: relative;
     z-index: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    overflow: visible;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 #contact-container {
@@ -387,21 +353,16 @@ header {
     flex-shrink: 0;
 }
 
-#contact-container > img {
+#contact-container img {
     width: min(100%, 500px);
     min-height: 0;
     height: auto;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,.15));
 }
 
 /* Footer */
 footer {
-    background-image: url("./assets/heroPaper.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
+    padding: 160px 20px 20px;
     margin-top: -160px;
-    padding-top: 160px; 
 }
 
 footer p {
@@ -409,7 +370,7 @@ footer p {
     font-size: 1.5rem;
 }
 
-/* Medium Screens */
+/* Medium screens */
 @media (min-width: 1201px) and (max-width: 1530px) {
     #left {
         width: 42%;
@@ -417,27 +378,12 @@ footer p {
 
     #right {
         width: 58%;
-        justify-content: flex-end;
-        align-items: center;
     }
 
     #right img {
         width: 95%;
         max-width: none;
-        margin-right: 0px;
         margin-bottom: 80px;
-    }
-
-    #intro, #name {
-        font-size: 6rem;
-    }
-
-    #subtitle {
-        font-size: 2rem;
-    }
-
-    #hero-btn {
-        font-size: 1rem;
     }
 
     #about-header {
@@ -460,10 +406,10 @@ footer p {
 }
 }
 
-@media (max-width: 1200px) and (min-width: 901px) {
+@media (min-width: 901px) and (max-width: 1200px) {
     #right img {
         width: 105%;
-        margin-right: -90px;
+        margin-right: 0;
         margin-bottom: -10px;
     }
 
@@ -475,22 +421,6 @@ footer p {
         width: 60%;
         justify-content: center;
         margin-bottom: 80px;
-    }
-
-    #right img {
-        margin-right: 0;
-    }
-
-    #intro, #name {
-        font-size: 6rem;
-    }
-
-    #subtitle {
-        font-size: 2rem;
-    }
-
-    #hero-btn {
-        font-size: 1rem;
     }
 
     #about-header {
@@ -513,53 +443,9 @@ footer p {
     #skills {
         min-height: 70vh;
     }
-
-    #contact-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        padding: 60px 30px;
-        text-align: center;
-    }
-
-    #contact-container h2 {
-        width: 100%;
-        margin-bottom: 20px;
-        font-size: 3rem;
-    }
-
-    #contact-me {
-        width: 100%;
-        max-width: 650px;
-    }
-
-    #contact-container p {
-        font-size: 2rem;
-    }
-
-    #contact-list {
-        justify-content: center;
-        gap: 35px;
-        flex-wrap: wrap;
-    }
-
-    #contact-list li a {
-        font-size: 2rem;
-    }
-
-    #contact-list svg {
-        width: 70px;
-        height: 70px;
-    }
-
-    #contact-container > img {
-        width: min(70%, 500px);
-        min-height: 0;
-        height: auto;
-    }
 }
 
-/* Small Screen */
+/* Small screen */
 @media (max-width: 900px) {
     #logo {
         font-size: 25px;
@@ -590,34 +476,22 @@ footer p {
 
     #right {
         justify-content: center;
-        align-items: center;
         margin-bottom: 80px;
     }
 
     #right img {
         width: 95%;
         max-width: 520px;
-        margin-right: 0;
         margin-bottom: 0;
     }
 
-    #intro, #name {
-        font-size: 6rem;
-    }
-
-    #subtitle {
-        font-size: 2rem;
-    }
-
     #hero-btn {
-        font-size: 1rem;
         margin-top: 25px;
         margin-bottom: 0;
     }
 
     #about-container {
         flex-direction: column;
-        justify-content: center;
         text-align: center;
     }
 
@@ -626,7 +500,8 @@ footer p {
     }
 
     #about-info {
-        width: 30rem;
+        width: 100%;
+        max-width: 30rem;
     }
 
     #about-container p {
@@ -642,16 +517,30 @@ footer p {
         flex-direction: column;
     }
 
-    #projects {
+    #projects, #skills {
         padding-bottom: 100px;
     }
+}
 
-    #skills {
-        padding-bottom: 100px;
+/* Medium and small screens */
+@media (max-width: 1530px) {
+    #intro,
+    #name {
+        font-size: 6rem;
     }
 
+    #subtitle {
+        font-size: 2rem;
+    }
+
+    #hero-btn {
+        font-size: 1rem;
+    }
+}
+
+/* Contact section for smaller screens */
+@media (max-width: 1200px) {
     #contact-container {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
         padding: 60px 30px;
@@ -666,21 +555,17 @@ footer p {
 
     #contact-me {
         width: 100%;
-        max-width: 650px;
     }
 
-    #contact-container p {
+    #contact-container p,
+    #contact-list li a {
         font-size: 2rem;
     }
 
     #contact-list {
+        flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
-        flex-wrap: wrap;
-    }
-
-    #contact-list li a {
-        font-size: 2rem;
     }
 
     #contact-list svg {
@@ -688,9 +573,7 @@ footer p {
         height: 70px;
     }
 
-    #contact-container > img {
+    #contact-container img {
         width: min(70%, 500px);
-        min-height: 0;
-        height: auto;
     }
 }
