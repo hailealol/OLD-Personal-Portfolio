@@ -10,7 +10,7 @@ scrapbook-inspired aesthetic with layered paper textures and handmade illustrati
   <li>Responsive layout for desktop, tablet, and mobile devices</li>
   <li>Hover animations throughout the site</li>
   <li>About Me section to get to know me better</li>
-  <li>Project section showcasing my work</li>
+  <li>Projects section showcasing my work</li>
   <li>Skills section highlighting technologies and programming languages</li>
   <li>Contact section to get in touch with me</li>
 </ul>
